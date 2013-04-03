@@ -41,6 +41,16 @@ def valid_signup? name
 	/xi 
 	name_pattern =~ name
 end
+def valid_password? password
+	password_pattern = 
+	if val > 5
+		output += ""
+	else
+		output += <<-HTML
+			<p>Password not long enough</p>
+			HTML
+	end
+end
 def message(msg)
 	session["message"] = msg
 end
